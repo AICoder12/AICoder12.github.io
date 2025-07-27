@@ -1,0 +1,75 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Knowledge-Sharing Prompt Network for Continual Defect Segmentation</title>
+    <!-- CSS -->
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+  </head> 
+  <body>
+    <!-- MAIN -->
+    <div id="main">
+
+            <div id="match-nav-wrapper">
+                <div id="match-nav-bar">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <!--th width="10%"><a href="#">Home</a></th-->
+                                <!--th width="30%"><a href="#video-explicit">Demonstration of the explicit method</a></th>
+                                <th width="30%"><a href="#video-implicit">Demonstration of the implicit method</a></th-->
+                                <!--th width="15%"></th-->
+                            </tr>
+                        </thead>
+                    </table>
+
+                </div>
+            </div>
+
+      <!-- HEADER -->
+      <div id="home-header">
+      
+            <div id="match-wrapper">
+
+                <!--h5><a href="#"><img src="image/logo.png"></a></h5-->
+
+              
+
+                <h2>Knowledge-Sharing Prompt Network for Continual Defect Segmentation</h2>
+                <center>
+                  <br />
+                  Anonymous TASE submission<br />
+                  <font size=4 color="red">
+                    <span style="font-weight:bold">Note that in order to comply with the double-blind review requirements of the journal, we have anonymized the link and related content</span>
+                  </font>
+                </center>
+                <br><strong>Abstract</strong>
+                <p style="text-align:justify; text-justify:inter-ideograph;">
+                  Defect segmentation plays a vital role in industrial quality inspection, with deep learning methods becoming the mainstream solution. In practical production, defect data accumulates over time, and new defect classes can emerge at any time. However, when adapting to new classes, existing models tend to suffer from catastrophic forgetting of old classes, causing significant accuracy degradation. This work tackles the challenge and introduces the task of continual defect segmentation (CDS) to investigate how to continuously learn new defect classes without forgetting previously acquired class knowledge. To address this issue, we propose a Knowledge-Sharing Prompt Network (KSPNet), which integrates multi-task learning mechanism with the frozen network to enable retention and continual expansion of knowledge from incremental class training, and fine tunes complementary prompt embeddings for efficient adaptation to new classes. Specifically, to enable generalized prompt inference on the frozen network, a Knowledge-Balanced Low-Rank Adaptation (KB-LoRA) module is designed to incorporate multi-task low-rank matrices into image encoder, effectively balancing feature learning between new and old defect classes under multi-task loss constraints.  Meantime, a Complementary Prompt Block (CPBlock) is designed to introduce task-invariant and task-specific prompts for adaptive learning, enabling the acquisition of complementary prompt information to guide continual defect segmentation. Extensive experiments conducted on the constructed CID-Seg and WD-Seg datasets have shown that the proposed method significantly outperforms existing methods and validates its superiority in the CDS task.
+				 <a href="https://github.com/PEfang-CV/KSPNet">Code and Datasets Available Here</a></p>
+
+                <h1>Overview</h1>
+                <div id="ships-structure-img"><img src="image/main.png" style="width: 100%; height: auto;"></div>
+               
+
+                <h1>Visualization and distribution statistics of CID-Seg and WD-Seg datasets.</h1>
+                <div id="aread"><img src="image/data.png" style="width: 100%; height: auto;"></div>
+
+          
+
+                <h1>Results of defect Segmentation</h1>
+                <div id="aread"><img src="image/CID.png" style="width: 100%; height: auto;"></div>
+                <div id="aread"><img src="image/WXD.png" style="width: 100%; height: auto;"></div>
+
+                     
+		    
+
+              </div>
+      <!-- ENDS Footer -->
+  </body>
+</html>
