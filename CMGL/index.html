@@ -1,0 +1,71 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Cross-Modal Guidance Learning for Zero-Shot Industrial Anomaly Detection</title>
+    <!-- CSS -->
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+  </head> 
+  <body>
+    <!-- MAIN -->
+    <div id="main">
+
+            <div id="match-nav-wrapper">
+                <div id="match-nav-bar">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <!--th width="10%"><a href="#">Home</a></th-->
+                                <!--th width="30%"><a href="#video-explicit">Demonstration of the explicit method</a></th>
+                                <th width="30%"><a href="#video-implicit">Demonstration of the implicit method</a></th-->
+                                <!--th width="15%"></th-->
+                            </tr>
+                        </thead>
+                    </table>
+
+                </div>
+            </div>
+
+      <!-- HEADER -->
+      <div id="home-header">
+      
+            <div id="match-wrapper">
+
+                <!--h5><a href="#"><img src="image/logo.png"></a></h5-->
+
+              
+
+                <h2>Cross-Modal Guidance Learning for Zero-Shot Industrial Anomaly Detection</h2>
+                <center>
+                  <br />
+                  Anonymous Submission<br />
+                  <font size=4 color="red">
+                    <span style="font-weight:bold">Note that in order to comply with the double-blind review requirements of the journal, we have anonymized the link and related content</span>
+                  </font>
+                </center>
+                <br><strong>Abstract</strong>
+                <p style="text-align:justify; text-justify:inter-ideograph;">
+                  Zero-shot Industrial Anomaly Detection (ZIAD) aims to develop a unified model capable of directly identifying unseen anomaly categories in images without requiring reference samples. Recently, large-scale vision–language models (VLMs) such as CLIP have shown great potential for solving this task. However, existing methods typically rely on manual text prompts to guide VLMs in anomaly detection, which often fail to capture fine-grained semantic cues, leading to limited accuracy. To address the challenge, this paper proposes a novel Cross-Modal Guidance Learning (CMGL) framework for ZIAD. Instead of handcrafted textual prompts, CMGL introduces learnable prompting mechanism to fully exploit the collaborative guidance between visual and textual modalities for efficient unseen anomalies detection. Leveraging the frozen image encoder of pre-trained CLIP, the CMGL extracts multi-scale patch tokens and global tokens of the input image as visual representations. Then, informed by the cross-modal information, adaptive prompt vectors are constructed to obtain textual representations. In the process, a Learnable Context Block (LCBlock) and a Multi-Layer Perceptron (MLP)  are introduced to extract holistic semantics and fine-grained details, and an Adaptive State Vector Module (ASVM) is designed to learn generalized normal and abnormal state vectors from extensive text descriptions. By aggregating the outputs of these components, textual representations of the image are acquired through the frozen text encoder. Finally, a Local-Global Token Integrator (LGTI) and an Uncertainty-Aware Anomaly Fusion Module (UAFM) are proposed to achieve anomaly recognition and localization through visual–textual alignment. Extensive experiments on multiple industrial datasets demonstrate the superiority of our method.
+				 <a href="https://github.com/AICoder12/CMGL">Code and Datasets Available Here</a></p>
+
+                <h1>Overview</h1>
+                <div id="ships-structure-img"><img src="image/main.png" style="width: 100%; height: auto;"></div>
+            
+          
+
+                <h1>Results of Anomaly Detection</h1>
+                <div id="aread"><img src="image/exp1.png" style="width: 100%; height: auto;"></div>
+                <div id="aread"><img src="image/exp2.png" style="width: 100%; height: auto;"></div>
+
+                     
+		    
+
+              </div>
+      <!-- ENDS Footer -->
+  </body>
+</html>
