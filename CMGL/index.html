@@ -53,8 +53,36 @@
                   Zero-shot Industrial Anomaly Detection (ZIAD) aims to develop a unified model capable of directly identifying unseen anomaly categories in images without requiring reference samples. Recently, large-scale vision–language models (VLMs) such as CLIP have shown great potential for solving this task. However, existing methods typically rely on manual text prompts to guide VLMs in anomaly detection, which often fail to capture fine-grained semantic cues, leading to limited accuracy. To address the challenge, this paper proposes a novel Cross-Modal Guidance Learning (CMGL) framework for ZIAD. Instead of handcrafted textual prompts, CMGL introduces learnable prompting mechanism to fully exploit the collaborative guidance between visual and textual modalities for efficient unseen anomalies detection. Leveraging the frozen image encoder of pre-trained CLIP, the CMGL extracts multi-scale patch tokens and global tokens of the input image as visual representations. Then, informed by the cross-modal information, adaptive prompt vectors are constructed to obtain textual representations. In the process, a Learnable Context Block (LCBlock) and a Multi-Layer Perceptron (MLP)  are introduced to extract holistic semantics and fine-grained details, and an Adaptive State Vector Module (ASVM) is designed to learn generalized normal and abnormal state vectors from extensive text descriptions. By aggregating the outputs of these components, textual representations of the image are acquired through the frozen text encoder. Finally, a Local-Global Token Integrator (LGTI) and an Uncertainty-Aware Anomaly Fusion Module (UAFM) are proposed to achieve anomaly recognition and localization through visual–textual alignment. Extensive experiments on multiple industrial datasets demonstrate the superiority of our method.
 				 <a href="https://github.com/AICoder12/CMGL">Code and Datasets Available Here</a></p>
 
-                <h1>Overview</h1>
+                <h1>Overview </h1>
                 <div id="ships-structure-img"><img src="image/main.png" style="width: 100%; height: auto;"></div>
+
+                <h1>Normal and Abnormal Text Descriptions</h1>
+                <style>
+                  .desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 2rem; }
+                  .desc-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; font-family: Arial, sans-serif; }
+                  .desc-card-header { padding: 10px 18px; font-size: 13px; font-weight: bold; }
+                  .desc-card-header.normal { background: #EAF3DE; color: #3B6D11; border-bottom: 1px solid #C0DD97; }
+                  .desc-card-header.abnormal { background: #FCEBEB; color: #A32D2D; border-bottom: 1px solid #F7C1C1; }
+                  .desc-card-body { padding: 12px 18px; display: flex; flex-wrap: wrap; gap: 6px; }
+                  .tag { font-size: 12px; padding: 3px 10px; border-radius: 999px; }
+                  .tag.normal { background: #EAF3DE; color: #27500A; border: 1px solid #C0DD97; }
+                  .tag.abnormal { background: #FCEBEB; color: #791F1F; border: 1px solid #F7C1C1; }
+                </style>
+                
+                <div class="desc-grid">
+                  <div class="desc-card">
+                    <div class="desc-card-header normal">Normal state descriptions</div>
+                    <div class="desc-card-body">
+                      <span class="tag normal">perfect</span><span class="tag normal">flawless</span><span class="tag normal">intact</span><span class="tag normal">undamaged</span><span class="tag normal">unbroken</span><span class="tag normal">whole</span><span class="tag normal">complete</span><span class="tag normal">sound</span><span class="tag normal">normal</span><span class="tag normal">healthy</span><span class="tag normal">good</span><span class="tag normal">reliable</span><span class="tag normal">safe</span><span class="tag normal">standard</span><span class="tag normal">qualified</span><span class="tag normal">stable</span><span class="tag normal">strong</span><span class="tag normal">solid</span><span class="tag normal">durable</span><span class="tag normal">consistent</span><span class="tag normal">clean</span><span class="tag normal">smooth</span><span class="tag normal">clear</span><span class="tag normal">uniform</span><span class="tag normal">even</span><span class="tag normal">regular</span><span class="tag normal">neat</span><span class="tag normal">unmarked</span><span class="tag normal">spotless</span><span class="tag normal">unblemished</span><span class="tag normal">functional</span><span class="tag normal">working</span><span class="tag normal">operational</span><span class="tag normal">proper</span><span class="tag normal">correct</span><span class="tag normal">balanced</span><span class="tag normal">harmonious</span>
+                    </div>
+                  </div>
+                  <div class="desc-card">
+                    <div class="desc-card-header abnormal">Abnormal state descriptions</div>
+                    <div class="desc-card-body">
+                      <span class="tag abnormal">abnormal</span><span class="tag abnormal">defective</span><span class="tag abnormal">flawed</span><span class="tag abnormal">damaged</span><span class="tag abnormal">broken</span><span class="tag abnormal">cracked</span><span class="tag abnormal">fractured</span><span class="tag abnormal">split</span><span class="tag abnormal">shattered</span><span class="tag abnormal">weakened</span><span class="tag abnormal">problematic</span><span class="tag abnormal">unreliable</span><span class="tag abnormal">unsafe</span><span class="tag abnormal">nonstandard</span><span class="tag abnormal">unqualified</span><span class="tag abnormal">unstable</span><span class="tag abnormal">fragile</span><span class="tag abnormal">loose</span><span class="tag abnormal">worn</span><span class="tag abnormal">inconsistent</span><span class="tag abnormal">dirty</span><span class="tag abnormal">rough</span><span class="tag abnormal">blurred</span><span class="tag abnormal">nonuniform</span><span class="tag abnormal">uneven</span><span class="tag abnormal">irregular</span><span class="tag abnormal">messy</span><span class="tag abnormal">marked</span><span class="tag abnormal">stained</span><span class="tag abnormal">blemished</span><span class="tag abnormal">malfunctioning</span><span class="tag abnormal">failed</span><span class="tag abnormal">nonfunctional</span><span class="tag abnormal">improper</span><span class="tag abnormal">incorrect</span><span class="tag abnormal">unbalanced</span><span class="tag abnormal">distorted</span>
+                    </div>
+                  </div>
+                </div>
             
           
 
